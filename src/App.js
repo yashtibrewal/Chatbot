@@ -6,20 +6,20 @@ import ChatBot from './components/ChatBot';
 
 function App() {
 
-  const [chatBotIsOpen, setChatBotOpen] = useState(false);
+  const [chatBotIsOpen, setChatBotOpen] = useState(true);
 
   const handleBotButtonClick = (event) => {
     setChatBotOpen(!chatBotIsOpen);
   }
 
   return (
-    <div className="relative z-0">
-      Hello
+    <div className="">
       {chatBotIsOpen && <ChatBot
-        className="" />}
+        className="fixed min-w-96 rounded-xl bottom-32 right-10 border-x-2 border-b-2 border-blue-500"
+      />}
       <BotButton
-        className="bg-blue-900 rounded-full p-5 w-16 z-10 fixed right-10 bottom-10"
-        onClick={ (e) => handleBotButtonClick(e)}
+        className="bg-blue-900 rounded-full px-5 py-2 z-10 fixed right-10 bottom-10 text-white"
+        onClick={(e) => handleBotButtonClick(e)}
       />
     </div>
   );

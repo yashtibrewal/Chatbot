@@ -2,8 +2,8 @@
 
 function Header() {
 
-    return <div className="bg-blue-700 text-white">
-        Your Assisstant
+    return <div className="px-2 py-4 bg-blue-700 text-white rounded-t-xl">
+        Your Assistant
     </div>
 
 } 

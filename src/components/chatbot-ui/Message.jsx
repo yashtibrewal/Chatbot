@@ -3,7 +3,7 @@
 function Message({message}) {
     
 
-    return <div>
+    return <div className="text-black">
         {message}
     </div>
 

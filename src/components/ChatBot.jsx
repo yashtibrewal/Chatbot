@@ -3,12 +3,16 @@ import Header from "./chatbot-ui/Header";
 import Messages from "./chatbot-ui/Messages";
 
 
-function ChatBot (){
+function ChatBot ({className}){
 
-    return <div className="w-40">
+    const sendMessageToServer = () => {
+        // api call
+    }
+
+    return <div className={className}>
         <Header/>
         <Messages/>
-        <ChatInput/>
+        <ChatInput sendMessageToServer={sendMessageToServer}/>
     </div>
 
 }

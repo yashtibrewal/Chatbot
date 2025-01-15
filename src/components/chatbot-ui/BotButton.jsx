@@ -5,7 +5,7 @@
 function BotButton({className, onClick}) {
 
     return <span className={className} onClick={onClick}>
-        <span className="text-white flex justify-center">Chat</span>
+        <span className="flex justify-center items-center">Chat</span>
     </span>
 
 }
