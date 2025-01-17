@@ -1,27 +1,16 @@
-import { useEffect, useState } from "react"
 import Message from "./Message";
 import { v4 as uuidv4} from 'uuid';
 
 
-function Messages () {
+function Messages ( {messages} ) {
 
-    const [messages, setMessages] = useState([]);
-
-    useEffect(()=> {
-        setMessages([
-            "Test",
-            "Test2",
-            "Test3"
-        ])
-    },[])
-
-    return <div className="min-h-96">
+    return (messages && <div className="min-h-96 max-h-96 overflow-y-auto">
         {messages.map((message)=>
             <Message 
                 key={uuidv4()}
                 message={message}/>
         )}
-    </div>
+    </div>)
 }
 
 export default Messages;
